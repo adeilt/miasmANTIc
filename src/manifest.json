@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "very small chrome extension with react and content scripts",
+  "version": "0.1",
+  "description": "very small chrome extension with react and content scripts",
+  "author": "Wil Langford",
+  "host_permissions": ["https://github.com/*"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/adeilt/very-small-chromeextension-contentscript-react"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}
