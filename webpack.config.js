@@ -5,7 +5,7 @@ const { ProvidePlugin } = require('webpack');
 
 module.exports = {
   mode: 'development',
-  devtool: 'cheap-module-source-map',
+  devtool: 'inline-source-map',
   entry: {
     content: './src/content.jsx',
   },
