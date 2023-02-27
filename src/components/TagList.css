@@ -13,7 +13,6 @@ ul.user_tag_list {
 }
 
 li.user_tag {
-  background-color: #cccccc;
   cursor: pointer;
   color: #000000;
   border: 1px solid rgb(0, 0, 0);
