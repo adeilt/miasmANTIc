@@ -4,15 +4,15 @@
   "eslint.alwaysShowStatus": true,
   "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
   "[json]": {
-       "editor.defaultFormatter": "esbenp.prettier-vscode",
-       "editor.formatOnSave": true
-   },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   "[javascript]": {
-       "editor.defaultFormatter": "esbenp.prettier-vscode",
-       "editor.formatOnSave": true
-   },
-   "[javascriptreact]": {
-       "editor.formatOnSave": true,
-       "editor.defaultFormatter": "esbenp.prettier-vscode"
-   },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

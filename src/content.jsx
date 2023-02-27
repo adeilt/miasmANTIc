@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-import "./content.css";
+import './content.css';
 
 const container_id = 'sidecar_container';
 
@@ -14,6 +14,6 @@ const root = createRoot(sidecar_container);
 root.render(<Sidecar />);
 
 // The only React component in this whole mess.  :)
-function Sidecar () {
-  return <div id="sidecar">I'm a sidecar!  Vroom!</div>;
+function Sidecar() {
+  return <div id="sidecar">I'm a sidecar! Vroom!</div>;
 }
