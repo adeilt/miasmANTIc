@@ -1,0 +1,35 @@
+div.user_tag_list {
+  background-color: rgb(146, 193, 209);
+}
+
+div.user_tag_list_title {
+  text-size: large;
+  text-align: center;
+  font-weight: bold;
+}
+
+ul.user_tag_list {
+  list-style-type: none;
+}
+
+li.user_tag {
+  background-color: #cccccc;
+  cursor: pointer;
+  color: #000000;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 1px;
+  padding: 0;
+  padding-left: 3px;
+  padding-right: 3px;
+  line-height: 1.5;
+  display: inline-block;
+  font-size: large;
+}
+
+li.user_tag_like {
+  background-color: #00ff48;
+}
+
+li.user_tag_dislike {
+  background-color: #ff2222;
+}

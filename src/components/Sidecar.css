@@ -1,8 +1,14 @@
-#sidecar {
+#miasmantic_sidecar {
   position: fixed;
-  width: 10%;
-  height: 20vh;
-  top: 15vh;
+
+  min-width: 10%;
+  width: fit-content;
+
+  min-height: 20vh;
+  height: fit-content;
+  max-height: 75vh;
+
+  top: 25vh;
   right: 0;
 
   padding: 5px;
@@ -12,4 +18,10 @@
   border: 2px solid black;
 
   z-index: 1000;
+}
+
+#miasmantic_sidecar_title {
+  font-size: larger;
+  text-align: center;
+  font-weight: bold;
 }
