@@ -1,5 +1,5 @@
 {
-  "name": "miasmANTIc",
+  "name": "miasmantic",
   "version": "0.1.0",
   "description": "A Chrome extension that helps me efficiently browse items on Steam.",
   "main": "src/index.js",
