@@ -6,8 +6,7 @@ import "./content.css";
 const container_id = 'sidecar_container';
 
 // Create the container and add it to the body
-const sidecar_container = document.createElement('div');
-sidecar_container.id = container_id;
+const sidecar_container = <div id={container_id}></div>;
 document.body.appendChild(sidecar_container);
 
 // Create the root and render the Sidecar into it
