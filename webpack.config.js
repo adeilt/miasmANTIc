@@ -1,6 +1,7 @@
 const path = require('path');
 
 const CopyPlugin = require('copy-webpack-plugin');
+const { ProvidePlugin } = require('webpack');
 
 module.exports = {
   mode: 'development',
@@ -33,6 +34,9 @@ module.exports = {
         { from: 'src/manifest.json' },
         { from: 'src/icons/', to: 'icons/' },
       ],
+    }),
+    new ProvidePlugin({
+      React: 'react',
     }),
   ],
 };
