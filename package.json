@@ -1,7 +1,7 @@
 {
-  "name": "very-small-chromeextension-contentscript-react",
+  "name": "miasmANTIc",
   "version": "0.1.0",
-  "description": "A very small Chrome Extension skeleton using content scripts and React.",
+  "description": "A Chrome extension that helps me efficiently browse items on Steam.",
   "main": "src/index.js",
   "scripts": {
     "build": "webpack"

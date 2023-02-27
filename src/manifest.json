@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "very small chrome extension with react and content scripts",
+  "name": "miasmANTIc",
   "version": "0.1",
-  "description": "very small chrome extension with react and content scripts",
+  "description": "A Chrome extension that helps me efficiently browse items on Steam.",
   "author": "Wil Langford",
   "host_permissions": ["https://github.com/*"],
   "content_scripts": [
     {
       "matches": [
-        "https://github.com/adeilt/very-small-chromeextension-contentscript-react"
+        "https://store.steampowered.com/app/*"
       ],
       "js": ["content.js"]
     }
