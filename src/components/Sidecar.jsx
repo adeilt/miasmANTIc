@@ -5,7 +5,7 @@ export default function Sidecar() {
   return (
     <div id="miasmantic_sidecar">
       <div id="miasmantic_sidecar_title">miasmANTIc</div>
-      <TagList />
+      <TagList line_breaks={true} />
     </div>
   );
 }

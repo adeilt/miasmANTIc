@@ -3,9 +3,9 @@ div.user_tag_list {
 }
 
 div.user_tag_list_title {
-  text-size: large;
-  text-align: center;
+  font-size: large;
   font-weight: bold;
+  text-align: center;
 }
 
 ul.user_tag_list {
@@ -22,8 +22,8 @@ li.user_tag {
   padding-left: 3px;
   padding-right: 3px;
   line-height: 1.5;
-  display: inline-block;
   font-size: large;
+  width: fit-content;
 }
 
 li.user_tag_like {
