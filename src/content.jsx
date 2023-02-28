@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import './content.css';
+import PrefsProvider from './PrefsContext';
 
 import Sidecar from './components/Sidecar.jsx';
+
+import './content.css';
 
 const container_id = 'sidecar_container';
 
@@ -15,11 +18,9 @@ document.body.appendChild(sidecar_container);
 const root = createRoot(sidecar_container);
 root.render(
   <React.StrictMode>
-    <Sidecar
-      user_data={{ user_tags: {} }}
-      preferences={{ colors: {} }}
-      steam_tags={get_steam_tags()}
-    />
+    <PrefsProvider>
+      <Sidecar steam_tags={get_steam_tags()} />
+    </PrefsProvider>
   </React.StrictMode>,
 );
 
@@ -33,7 +34,8 @@ function get_steam_tags() {
   return steam_tags.map((tag) => tag.innerText.trim());
 }
 
-chrome.storage.sync.get(['user_data', 'preferences'], function (response) {
-  var user_tags = response['user_tags'] ? response['user_tags'] : {};
-  var preferences = response['preferences'] ? response['preferences'] : {};
+chrome.storage.sync.get(['user_data', 'prefs'], function (response) {
+  const saved_prefs = response['prefs'] ? response['prefs'] : {};
+  const { prefs, setPrefs } = useContext(PrefsContext);
+  setPrefs(saved_prefs);
 });
