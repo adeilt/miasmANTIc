@@ -5,6 +5,7 @@
   "description": "A Chrome extension that helps me efficiently browse items on Steam.",
   "author": "Wil Langford",
   "host_permissions": ["https://github.com/*"],
+  "permissions": ["storage"],
   "content_scripts": [
     {
       "matches": ["https://store.steampowered.com/app/*"],
