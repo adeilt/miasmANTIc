@@ -7,6 +7,17 @@ import Sidecar from './components/Sidecar.jsx';
 
 import './content.css';
 
+document['miasmantic_state'] = {
+  initialized_prefs: false,
+  prefs_handoff: null,
+};
+
+chrome.storage.sync.get(['user_data', 'prefs'], function (response) {
+  const saved_prefs = response['prefs'] ? response['prefs'] : {};
+  document.miasmantic_state.prefs_init = saved_prefs;
+  document.miasmantic_state.initialized_prefs = true;
+});
+
 const container_id = 'sidecar_container';
 
 // Create the container and add it to the body
@@ -33,9 +44,3 @@ function get_steam_tags() {
 
   return steam_tags.map((tag) => tag.innerText.trim());
 }
-
-chrome.storage.sync.get(['user_data', 'prefs'], function (response) {
-  const saved_prefs = response['prefs'] ? response['prefs'] : {};
-  const { prefs, setPrefs } = useContext(PrefsContext);
-  setPrefs(saved_prefs);
-});
