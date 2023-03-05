@@ -5,7 +5,7 @@ import TagList from './TagList';
 
 import { PrefsContext } from '../PrefsContext';
 
-export default function Sidecar({ steam_tags }) {
+export default function Sidecar({ steam_item_tags: steam_item_tags }) {
   const { prefs, setPrefs } = useContext(PrefsContext);
   // const colors = prefs.colors;
   console.log('M-PREFS');
@@ -16,7 +16,7 @@ export default function Sidecar({ steam_tags }) {
       <div id="miasmantic_sidecar_title">miasmANTIc</div>
       {/* <span style={{ backgroundColor: prefs.colors.like }}>like</span>
       <span style={{ backgroundColor: prefs.colors.dislike }}>dislike</span> */}
-      <TagList steam_tags={steam_tags} line_breaks={true} />
+      <TagList steam_item_tags={steam_item_tags} line_breaks={true} />
     </div>
   );
 }

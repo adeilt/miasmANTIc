@@ -30,17 +30,17 @@ const root = createRoot(sidecar_container);
 root.render(
   <React.StrictMode>
     <PrefsProvider>
-      <Sidecar steam_tags={get_steam_tags()} />
+      <Sidecar steam_item_tags={get_steam_item_tags()} />
     </PrefsProvider>
   </React.StrictMode>,
 );
 
-function get_steam_tags() {
-  let steam_tags = Array.from(
+function get_steam_item_tags() {
+  let steam_item_tags = Array.from(
     document
       .getElementsByClassName('glance_tags popular_tags')[0]
       .getElementsByTagName('a'),
   );
 
-  return steam_tags.map((tag) => tag.innerText.trim());
+  return steam_item_tags.map((tag) => tag.innerText.trim());
 }

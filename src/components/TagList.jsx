@@ -1,11 +1,14 @@
 import './Taglist.css';
 
-export default function TagList({ steam_tags, line_breaks = false }) {
+export default function TagList({
+  steam_item_tags: steam_item_tags,
+  line_breaks = false,
+}) {
   return (
     <div id="user_tag_list_div" className="user_tag_list">
       <div className="user_tag_list_title">Tags</div>
       <ul id="user_tag_list" className="user_tag_list">
-        {steam_tags.map((tag_id) => (
+        {steam_item_tags.map((tag_id) => (
           <Tag id={tag_id} key={tag_id} line_breaks={line_breaks} />
         ))}
       </ul>
